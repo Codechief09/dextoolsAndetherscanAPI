@@ -60,7 +60,7 @@ const ControlPage = () => {
 	};
 
 	const handleClickAddBlackList = async () => {
-		console.log("hello", blackListTokenAdress);
+		if (blackListTokenAdress.length !== 42) return;
 		try {
 			const response = await fetch("http://ec2-3-15-102-164.us-east-2.compute.amazonaws.com/mainPage", {
 				method: "POST",
@@ -128,7 +128,7 @@ const ControlPage = () => {
 						autohide
 						show={showToast}
 						delay={3000}
-						style={{backgroundColor: "rgb(0, 176, 80)", borderRadius: "10px", color: "white", fontSize: "18px"}}
+						style={{backgroundColor: "rgb(0, 176, 80)", borderRadius: "10px", color: "white", fontSize: "16px"}}
 					>
 						<Toast.Header style={{height: "70px", borderRadius: "10px", backgroundColor: "rgb(0, 176, 80)"}}>
 							<strong className="mr-auto"> ✔ Successfully added in blacklist! </strong>
