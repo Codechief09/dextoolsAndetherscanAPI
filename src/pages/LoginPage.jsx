@@ -24,7 +24,7 @@ const LoginPage = () => {
 
 	const handleClick = async () => {
 		try {
-			const response = await fetch("http://localhost:3001/login", {
+			const response = await fetch("http://ec2-3-15-102-164.us-east-2.compute.amazonaws.com/login", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
